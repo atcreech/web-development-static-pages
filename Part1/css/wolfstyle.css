@@ -1,0 +1,119 @@
+/* Custom font for title */
+.raleway-font {
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Logo and Title */
+#top {
+    display: flex;
+    align-items:center;
+    background-color: #d31010;
+    grid-area: top;
+}
+
+/* Site logo in top left */
+#site-logo {
+    height: 100px;
+    width: 100px;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+/* Site title in the center of the header */
+#site-title {
+    font-family: "Raleway", "Times New Roman", serif;
+    width: 240px;
+    margin-left: calc(50vw - 220px);
+    margin-right: calc(50vw - 137px);
+    color: white;
+}
+
+/* Link section at the bottom of the header */
+#top-links {
+    display: flex;
+    background-color: #d31010;
+    grid-area: links;
+    align-items: center;
+    justify-content:space-evenly;
+    border-top: 2px solid black;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid black;
+}
+
+/* Links at the bottom of the header */
+#top-links a {
+    color: black;
+    font-weight: bold;
+    text-decoration-line: none;
+    padding: 5px;
+    background-color: #d31010;
+    border-radius: 5px;
+}
+
+/* Format for links that have been visited */
+#top-links a:visited {
+    color: black;
+}
+
+/* Format for links when hovering over them */
+#top-links a:hover {
+    background-color: #ffffffa8;
+}
+
+/* Header at the top of the page, made sticky so
+   even with scrolling it is always visible
+*/
+header {
+    position: sticky;
+    top:0;
+    display: grid;
+    grid-template-areas:
+        "top top"
+        "links links";
+}
+
+/* Formatting for displaying article columns */
+.article-row {
+    display: flex;
+}
+
+/* Formatting for an individual article summary */
+.column article {
+    border: 1px solid gray;
+    border-radius: 4px;
+    background-color:#a5a5a53a;
+    padding: 5px;
+    margin-left: 10px;
+    margin-top: 10px;
+    width: calc(50vw - 35px);
+    text-align: center;
+    overflow-wrap: break-word;
+}
+
+/* An individual article image */
+.article-image {
+    width: calc(50vw - 50px);
+    border-radius: 10px;
+    padding: 5px;
+}
+
+/* Read more text at the bottom of an article summary */
+.read-more {
+    text-decoration-line: none;
+    color: rgb(100, 100, 100);
+}
+
+/* Title of an article */
+.article-title {
+    text-decoration-line: none;
+    color: black;
+}
+
+/* Ensures the page takes up the entire viewport */
+body {
+    margin: 0;
+}

@@ -1,0 +1,348 @@
+/* Size and fill in logo */
+#logo {
+    width: 125px;
+    background-color: black;
+}
+
+/* Sidebar on the left */
+aside {
+    background-color: lightgray;
+    width: 125px;
+    top: 5px;
+    padding: 10px;
+
+}
+
+/* "Buttons" in the sidebar */
+.dash-links a{
+    padding: 5px;
+    color: black;
+    text-decoration-line: none;
+    background-color: white;
+    border-radius: 5px;
+}
+
+/* Spacing for the sidebar "buttons" */
+.side-button {
+    margin-top: 12px;
+}
+
+/* Setting up the Buttons and Typography "buttons"
+   Hidden initially to create a drop-down effect
+*/
+.dash-sublinks {
+    display: none;
+    margin-left: 20px;
+    margin-top: 2px;
+    margin-bottom: 5px;
+}
+
+/* Hovering over the UI Features "button" shows Buttons
+   and Typography
+*/
+#features:hover + .dash-sublinks {
+    display: block;
+}
+
+/* Hovering over the UI Features dropdown makes it persist */
+#feature-button:hover .dash-sublinks {
+    display: block;
+}
+
+/* Footer for the sidebar */
+.aside-footer {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* "Buttons" inside the sidebar footer */
+.aside-footer a {
+    padding: 5px;
+    color: black;
+    text-decoration-line: none;
+    background-color: white;
+    border-radius: 5px;
+}
+
+/* Everything that isn't the sidebar */
+section {
+    margin-left: -5px;
+    padding-left: 10px;
+}
+
+/* The top section including the search bar and top buttons */
+header {
+    display: flex;
+    justify-content: space-between;
+    width: calc(100vw - 41px);
+}
+
+/* Search bar */
+#left-section {
+    padding: 10px;
+}
+
+/* Top buttons */
+#right-section {
+    display: grid;
+    grid-template-areas: "settings notifications messages account";
+    gap: 5px;
+    margin-right: 130px;
+    margin-top: 2px;
+}
+
+/* User Account dropdown */
+#account {
+    grid-area: account;
+}
+
+/* Settings dropdown */
+#settings {
+    grid-area: settings;
+}
+
+/* Notifications dropdown */
+#notifications {
+    position: relative;
+    grid-area: notifications;
+    line-height: 0;
+}
+
+/* Messages dropdown */
+#messages {
+    position: relative;
+    grid-area: messages;
+    line-height: 0;
+}
+
+/* User Account button */
+#user-button {
+    text-wrap: wrap;
+    width: 70px;
+    padding: 5px;
+}
+
+/* User account image */
+#user-button img {
+    width: 50px;
+}
+
+/* List items within the dropdowns */
+.dropdown ul {
+    list-style: none;
+    margin-left: -30px;
+}
+
+/* Dropdown options
+
+   Sets the display to none initially to
+   hide the menu and create a dropdown functionality
+*/
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: rgb(225, 225, 225);
+    border: 2px solid lightgray;
+    margin-top: 1px;
+    margin-left: -55px;
+    text-wrap: nowrap;
+    z-index: 1;
+    border-radius: 5px;
+}
+
+/* Individual item within the dropdown menu */
+.dropdown-item {
+    background-color: rgb(240, 240, 240);
+    padding: 12px;
+    margin-right: 10px;
+    margin-top: 5px;
+    border: 2px solid lightgray;
+    border-radius: 5px;
+}
+
+/* Header within the dropdown menu */
+.dropdown-header {
+    margin-left: 10px;
+    font-size: 12pt;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+/* When the button for a dropdown menu has focus,
+   the menu appears, but only that menu
+*/
+.dropdown-button:focus + .dropdown-menu {
+    display: block;
+}
+
+/* When the dropdown button is hovered over, the mouse
+   turns into a pointer
+*/
+.dropdown-button:hover {
+    cursor: pointer;
+}
+
+/* When the dropdown menu is hovered over, it persists
+   until the mouse moves away
+
+   Only works if the dropdown menu is already visible
+   from pressing the button
+*/
+.dropdown-menu:hover {
+    display: block;
+}
+
+/* Top four boxes in the main content displayed in a grid */
+.box-grid {
+    display: grid;
+    grid-template-areas: 
+        "borrowed profit"
+        "conversion income";
+    margin-top: 25px;
+    width: calc(100vw - 171px);
+    text-align: center;
+    gap: 7px;
+    margin-bottom: 7px;
+}
+
+/* Top left box in the top content grid */
+#borrowed {
+    grid-area: borrowed;
+    border-right: hidden;
+    border-bottom: hidden;
+}
+
+/* Top right box in the top content grid */
+#profit {
+    grid-area: profit;
+    border-bottom: hidden;
+}
+
+/* Bottom left box in the top content grid */
+#conversion {
+    grid-area: conversion;
+    border-right: hidden;
+    border-bottom: hidden;
+}
+
+/* Bottom right box in the top content grid */
+#income {
+    grid-area: income;
+    border-bottom: hidden;
+}
+
+/* Titles of the boxes in the top content grid */
+.dashboard-title {
+    font-size: 14pt;
+    text-decoration-line: underline;
+}
+
+/* Format for money in the top content grid */
+.dashboard-money {
+    font-size: 12pt;
+}
+
+/* Format for an individual box in the top content grid */
+.dashboard-box {
+    background-color: rgb(240, 240, 240);
+    border-radius: 15px;
+    border-style: border-box;
+    padding: 5px;
+    line-height: 15px;
+}
+
+/* Format for a card, present in all boxes below the top grid of four */
+.card {
+    background-color: rgb(240, 240, 240);
+    border-radius: 15px;
+    text-align: center;
+    border-style: border-box;
+    padding: 10px;
+    max-width: calc(100vw - 191px);
+}
+
+/* Only used for the table in the Revenue by location box with the map */
+.card table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Format for buttons within a card */
+.card button {
+    background-color: lightgray;
+    border-color: rgb(230, 230, 230);
+    cursor: pointer;
+}
+
+/* Bottom grid of four */
+.card-grid {
+    display: grid;
+    grid-template-areas: 
+        "impressions traffic"
+        "chart-group chart-group";
+    max-width: calc(100vw - 171px);
+    gap: 7px;
+    margin-top: 7px;
+}
+
+/* Top left box in bottom content grid */
+#impressions {
+    grid-area: impressions;
+    border-top: hidden;
+    border-right: hidden;
+    border-bottom: hidden;
+}
+
+/* Top right box in bottom content grid */
+#traffic {
+    grid-area: traffic;
+    border-top: hidden;
+    border-bottom: hidden;
+}
+
+/* Grid containing the bottom two boxes */
+#chart-group {
+    grid-area: chart-group;
+    display: grid;
+    grid-template-areas: "rev-by-location order-stats";
+    width: calc(100vw - 171px);
+    gap: 7px;
+}
+
+/* Bottom-most left box */
+#rev-by-location {
+    grid-area: rev-by-location;
+    border-right: hidden;
+}
+
+/* Bottom-most right box */
+#order-stats {
+    grid-area: order-stats;
+}
+
+/* Format for card titles */
+.card-title {
+    font-size: 14pt;
+    text-decoration-line: underline;
+}
+
+/* Format for subtitle text in cards */
+.card-subtitle {
+    font-size: 10pt;
+    margin-top: -15px;
+}
+
+/* Format for chart images */
+.chart {
+    width: calc(50vw - 135px);
+    padding: 5px;
+}
+
+/* Format for main body, places the sidebar on the left side and
+   everything else to the right
+*/
+body {
+    display: flex;
+    margin: 0;
+}
